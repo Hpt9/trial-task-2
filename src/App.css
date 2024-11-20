@@ -1,0 +1,10 @@
+.main_page {
+    height: 100vh;
+    background-image: url("./assets/backgorundimg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .overlay {
+        height: 100%;
+        background: rgba(0, 0, 0, 0.75);
+    }
+}

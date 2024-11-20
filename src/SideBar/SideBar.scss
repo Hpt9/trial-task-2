@@ -1,0 +1,98 @@
+.fullSideBar_div {
+    height: calc(100% - 71px);
+}
+
+#root>div>div.rendered_pages>div>div>div>nav>div>div>div>nav {
+    border-left: 1px solid rgba(138, 65, 148, 1);
+    margin-left: 21px;
+}
+
+#root>div>div.rendered_pages>div>div {
+    max-width: 370px !important;
+}
+
+#root>div>div.rendered_pages>div>div>div>nav {
+    margin-left: 75px;
+}
+
+.custom-drawer {
+    transform: translateX(-371px) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.drawer-open {
+    transform: translateX(0) !important;
+}
+
+.mini-sidebar {
+    &>div{transition: all ease-in-out .05s;width: 40px; height: 36px;}
+    &>div:hover{
+        background-color: rgba(138, 65, 148, 1);
+
+    }
+    &>div:hover:not(:first-child,:nth-child(4)){
+        svg path{
+            fill: white;
+        }
+    }
+    &>div:first-child:hover{
+
+        svg g path:nth-child(1),svg g path:nth-child(3){
+            stroke : white;
+        }
+        svg g path:nth-child(2) {
+            fill: white;
+        }
+    }
+    &>div:nth-child(4):hover svg path{
+        stroke: white;
+    }
+}
+#root > div > div.rendered_pages > div > div > div > nav > div > div > button:hover{
+    background-color: rgba(138,65,148,1);
+}
+#root > div > div.rendered_pages > div > div > div > nav > div > div:nth-child(1){
+    &:hover{
+        background-color: rgba(138, 65, 148, 1);
+    }
+}
+#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(1) > div:hover > button > div > svg > g{
+    path:nth-child(1),path:nth-child(3){
+        stroke : white !important;
+    }
+    path:nth-child(2) {
+        fill: white !important;
+    }
+}
+#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > div > svg > path{fill: white;}
+#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(4) > div:hover > button{
+    &> div > svg path{
+        stroke: white;
+        fill: transparent;
+    }
+
+}
+#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(1){
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+#root > div > div.rendered_pages > div > div> div > nav > div > div > button{
+    border-radius: 8px;
+}
+#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > p{color: white !important;}
+#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > span > div > svg > path {stroke: white;}
+#root > div > div.rendered_pages > div > div > div > nav > div > div {
+    .accordion-icon{
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        transition: all ease-in-out .03s;
+    }
+    &:hover .accordion-icon{
+        background-color: rgba(170, 116, 177, 1) !important;
+    }
+}
+// {`${open === 1 ? 'white':'black'}`}
+// className={`border-b-0 p-3 ${open === 1 ? "bg-[rgba(138,65,148,1)] text-white" : ""}`}
+//{`${open === 1 ? "text-white" : ""}`}
+// ${open === 1 ? 'background-color: rgba(170, 116, 177, 1);' : ''}
