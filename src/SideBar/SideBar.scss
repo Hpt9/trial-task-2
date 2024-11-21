@@ -2,16 +2,18 @@
     height: calc(100% - 71px);
 }
 
-#root>div>div.rendered_pages>div>div>div>nav>div>div>div>nav {
+#root>div>div>div>div>nav>div>div>div>nav {
     border-left: 1px solid rgba(138, 65, 148, 1);
     margin-left: 21px;
 }
-
-#root>div>div.rendered_pages>div>div {
-    max-width: 370px !important;
+#root > div > div.fullSideBar_div.absolute.top-2.left-5.bg-white.rounded-sm.py-6.px-4.flex.flex-col.items-center.z-30 > div.absolute.inset-0.w-full.h-full.pointer-events-auto.z-\[9995\].bg-black.bg-opacity-60.backdrop-blur-sm{
+    width: 100%;
 }
 
-#root>div>div.rendered_pages>div>div>div>nav {
+#root > div > div.fullSideBar_div > div[tabindex="-1"]{
+    max-width: 370px !important;
+}
+#root>div>div>div>div>nav {
     margin-left: 75px;
 }
 
@@ -48,15 +50,15 @@
         stroke: white;
     }
 }
-#root > div > div.rendered_pages > div > div > div > nav > div > div > button:hover{
+#root > div  > div > div > div > nav > div > div > button:hover{
     background-color: rgba(138,65,148,1);
 }
-#root > div > div.rendered_pages > div > div > div > nav > div > div:nth-child(1){
+#root > div  > div > div > div > nav > div > div:nth-child(1){
     &:hover{
         background-color: rgba(138, 65, 148, 1);
     }
 }
-#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(1) > div:hover > button > div > svg > g{
+#root > div  > div > div > div > nav > div:nth-child(1) > div:hover > button > div > svg > g{
     path:nth-child(1),path:nth-child(3){
         stroke : white !important;
     }
@@ -64,24 +66,24 @@
         fill: white !important;
     }
 }
-#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > div > svg > path{fill: white;}
-#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(4) > div:hover > button{
+#root > div  > div > div > div > nav > div > div:hover > button > div > svg > path{fill: white;}
+#root > div  > div > div > div > nav > div:nth-child(4) > div:hover > button{
     &> div > svg path{
         stroke: white;
         fill: transparent;
     }
 
 }
-#root > div > div.rendered_pages > div > div > div > nav > div:nth-child(1){
+#root > div  > div > div > div > nav > div:nth-child(1){
     border-radius: 8px !important;
     overflow: hidden;
 }
-#root > div > div.rendered_pages > div > div> div > nav > div > div > button{
+#root > div  > div > div> div > nav > div > div > button{
     border-radius: 8px;
 }
-#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > p{color: white !important;}
-#root > div > div.rendered_pages > div > div > div > nav > div > div:hover > button > span > div > svg > path {stroke: white;}
-#root > div > div.rendered_pages > div > div > div > nav > div > div {
+#root > div  > div > div > div > nav > div > div:hover > button > p{color: white !important;}
+#root > div  > div > div > div > nav > div > div:hover > button > span > div > svg > path {stroke: white;}
+#root > div  > div > div > div > nav > div > div {
     .accordion-icon{
         width: 24px;
         height: 24px;

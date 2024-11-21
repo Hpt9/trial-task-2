@@ -1,15 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {IconButton,Typography,List,ListItem,ListItemPrefix,Accordion,AccordionHeader,AccordionBody,Drawer,Card,} from "@material-tailwind/react";
 import './SideBar.scss'
 import MenuIcon from '../assets/icon-park-outline_application-menu.svg'
 export function SidebarWithBurgerMenu() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
   const handleOpen = (value: number) => {setOpen(open === value ? 0 : value);};
   const openDrawer = () => setIsDrawerOpen(true);
   const closeDrawer = () => setIsDrawerOpen(false);
-  const svgs = []
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
   return (
     <>
       <IconButton variant="text" size="lg" onClick={openDrawer}>
@@ -57,12 +61,12 @@ export function SidebarWithBurgerMenu() {
         </div>
 
       </div>
-      <Drawer open={isDrawerOpen} onClose={closeDrawer} onMouseLeave={closeDrawer}
+      <Drawer open={isDrawerOpen} onClose={closeDrawer} 
         className={`custom-drawer ${isDrawerOpen ? 'drawer-open' : ''}`}
       >
         <Card
           color="transparent"
-          shadow={false}
+          shadow={true}
           className="h-[calc(100vh-2rem)] w-full p-4 relative"
         >
           <div className="mini-sidebar absolute top-24 left-7 flex flex-col gap-y-2.5">
@@ -177,10 +181,10 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/sales/application-data")}>
                     Application Data
                   </ListItem>
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/sales/lead-details")}>
                     Lead Details
                   </ListItem>
                 </List>
@@ -234,11 +238,10 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
-                  <ListItem>
-
+                  <ListItem onClick={() => handleNavigation("/finance/raw-data")}>
                     Raw Data
                   </ListItem>
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/finance/report")}>
                     Report
                   </ListItem>
                 </List>
@@ -293,13 +296,13 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/training/tracker")}>
                     Tracker
                   </ListItem>
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/training/checklist")}>
                     Checklist
                   </ListItem>
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/training/report")}>
                     Report
                   </ListItem>
                 </List>
@@ -354,10 +357,10 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/internship/interns-situation")}>
                     Interns Situations
                   </ListItem>
-                  <ListItem>
+                  <ListItem onClick={() => handleNavigation("/internship/daily-dataset")}>
                     Daily Dataset
                   </ListItem>
                 </List>
@@ -411,10 +414,10 @@ export function SidebarWithBurgerMenu() {
               </ListItem>
               <AccordionBody className="py-1">
                 <List className="p-0">
-                  <ListItem>
+                  <ListItem  onClick={() => handleNavigation("/career/talent-pool")}>
                     Talent Pool
                   </ListItem>
-                  <ListItem>
+                  <ListItem  onClick={() => handleNavigation("/career/vacancies")}>
                     Vacancies
                   </ListItem>
                 </List>
